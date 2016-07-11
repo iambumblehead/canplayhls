@@ -1,0 +1,17 @@
+{
+  "name": "canplayhls",
+  "version": "0.0.1",
+  "license" : "MIT",
+  "main" : "canplayhls",
+  "readmeFilename": "README.md",
+  "description": "a true or false value indicating hls support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iambumblehead/canplayhls.git"
+  },
+  "keywords": [
+    "canplay",
+    "videojs",
+    "hls"
+  ]
+}
