@@ -5,8 +5,8 @@
 /**
  * Whether the browser has built-in HLS support.
  */
-var canplayhls = module.exports = (function() {
-  var doc = typeof document === 'object' && document,
+export default (() => {
+  let doc = typeof document === 'object' && document,
       videoelem = doc && doc.createElement('video'),
       isvideosupport = Boolean(videoelem && videoelem.canPlayType),
       // HLS manifests can go by many mime-types
@@ -25,7 +25,6 @@ var canplayhls = module.exports = (function() {
         'application/mpegurl'
       ];
 
-  return isvideosupport && canPlay.some(function (canItPlay) {
-    return /maybe|probably/i.test(videoelem.canPlayType(canItPlay));
-  });
-}());
+  return isvideosupport && canPlay
+    .some(canItPlay => /maybe|probably/i.test(videoelem.canPlayType(canItPlay)));
+})();
