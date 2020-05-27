@@ -1,6 +1,6 @@
 {
   "name": "canplayhls",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/canplayhls",
   "module": "canplayhls",
@@ -11,7 +11,7 @@
     "url": "https://github.com/iambumblehead/canplayhls.git"
   },
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel.js --plugins transform-es2015-unicode-regex --presets env -d dist/ canplayhls.js",
+    "start": "./node_modules/babel-cli/bin/babel.js --presets env -d dist/ canplayhls.js",
     "serve": "node express.js"
   },
   "keywords": [
@@ -21,8 +21,6 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-es2015-unicode-regex": "6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "express": "^4.16.2"
+    "express": "^4.17.1"
   }
 }
